@@ -27,6 +27,7 @@ class Admin::CategoriesController < Admin::BaseController
     @categories = Category.find(:all)
     @category = params[:id]?  Category.find(params[:id]): Category.new
     @category.attributes = params[:category]
+
     if request.post?
       respond_to do |format|
         format.html { save_category }
