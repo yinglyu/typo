@@ -15,7 +15,7 @@ describe Admin::CategoriesController do
     get :index
     assert_response :redirect, :action => 'index'
   end
-  
+
   describe "test_create" do
     before(:each) do
       get :new
@@ -40,6 +40,7 @@ describe Admin::CategoriesController do
     assert_response :redirect, :action => 'index'
   end
 
+
   describe "test_edit" do
     before(:each) do
       get :edit, :id => Factory(:category).id
@@ -62,8 +63,6 @@ describe Admin::CategoriesController do
     post :edit, :id => Factory(:category).id
     assert_response :redirect, :action => 'index'
   end
-  
-  
 
   describe "test_destroy with GET" do
     before(:each) do
